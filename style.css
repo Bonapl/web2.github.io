@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+.titlebar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.titlebar .title h3{
+  color: #ffbb52;
+}
+.titlebar .title img{
+  height: 60px;
+}
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+header .search input{
+   background-color: #374151;
+   width: 210px;
+   height: 34px;
+   border: none;
+   border-radius: 44px;
+   margin-left: 8px;
+   padding: 10px;
+   color: #fff;
+}
+header .search button{
+    width: 70px;
+    height: 34px;
+    border:none;
+    border-radius: 44px;
+    background-color: #F0924F;
+}
+header .search button:hover{
+    cursor: pointer;
+}
+header .search button:active{
+    cursor: pointer;
+    transform: scale(0.96);
+    box-shadow: 3px 4px 10px rgba(0,0,0,0.2);
+}
+header .account{
+    text-align: center;
+    margin-right: 18px;
+    margin-top: 18px;
+}
+header .account i{
+    color: #ffbb52;
+}
+header .account i:hover{
+    cursor: pointer;
+}
+header .account p{
+    font-size: 12px;
+}
+.sidebar .btn i{
+    font-size: 20px;
+    color: #5b5b5b;
+}
+.sidebar .btn i:hover{
+    color: #F0924F;
+}
+.offcanvas-header{
+    background-color: #ededed;
+    width: 148px;
+}
+.offcanvas-body{
+    background-color: #ededed;
+    width: 148px;
+}
+.offcanvas-body ul{
+    list-style: none;
+}
+.offcanvas-body ul .home{
+    background-color: #F0924F;
+}
+.offcanvas-body ul li{
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 14px;
+    width: 58px;
+    height: 58px;
+}
+.offcanvas-body ul li i{
+    font-size: 16px;
+}
+.offcanvas-body ul li a{
+    font-size: 10px;
+    text-decoration: none;
+    color: #000;
+}
+/*logout*/
+.logout{
+  width: 100%;
+  text-align: center;
+}
+.logout a{
+  color: #000;
+  text-decoration: none;
+}
+.logout a:hover{
+  color: #F0924F;
+  cursor: pointer;
+}
+
+
+/*swicth-btn*/
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .toggle-slot {
+    font-size: 10px;
+    position: relative;
+    height: 2.5em;
+    width: 4em;
+    border: 0px solid transparent;
+    border-radius: 10em;
+    background-color: rgb(210, 210, 210);
+    transition: background-color 250ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+  }
+  
+  .toggle-button {
+    transform: translate(0.3em, 0.25em);
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.75em white;
+    transform: translate(1.65em, 0.25em);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: #ffbb52;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+  }
+  
+  .moon-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 0;
+    transform: translate(11em, 2em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(-15deg);
+  }
+  /*DarkMode*/
+  .dark-mode{
+    background-color: #000;
+    color: #fff;
+  }
+
+  /*Container-md*/
+  .container-md{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .container-md .con{
+    background-color: rgba(228, 228, 228, 0.384);
+    width: 100%;
+    border-radius: 24px;
+    -moz-outline-radius: 14px;
+  }
+  /*con-bar*/
+  .con .con-bar{
+    width: 100%;
+    height: 180px;
+    overflow-y: scroll;
+    padding: 8px;
+  }
+  .con-bar .bar-scroll{
+    gap: 8px;
+    display: flex;
+    width: 2000px;
+  }
+  .con-bar .bar-scroll .pizza{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/048/640/346/small_2x/assorted-toppings-pizza-on-b-background-free-photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+  }
+  .con-bar .bar-scroll .burger{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/053/618/776/small_2x/gourmet-burger-with-layers-of-fillings-on-a-flat-surface-foodgraphy-photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+  }
+  .con-bar .bar-scroll .bar-box{
+    border-radius: 14px;
+    width: 400px;
+    height: 160px;
+    background-color: #fff;
+    animation:  barscroll 5s infinite;
+  }
+  @keyframes barscroll{
+    to{
+      transform: translate(0);
+    }
+    from{
+      transform: translate(100%);
+    }
+  }
+
+/*footer*/
+.footer {
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-section {
+  margin: 10px;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 5px 0;
+}
+.footer-section a {
+  color: #ffbb52;
+  text-decoration: none;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+}
+.social-icons a:hover {
+  color: #ff4500;
+}
+
+
+  /*Screen*/
+  @media screen and (max-width:418px){
+
+
+
+
+
+    /*Header*/
+    header .search input{
+      width: 160px;
+      height: 32px;
+      padding: 6px;
+    }
+    header .search button{
+      height: 32px;
+    }
+    header .account p{
+      font-size: 10px;
+    }
+
+
+    /*Container-md*/
+    .container-md .con{
+      background-color: rgba(228, 228, 228, 0.384);
+      width: 100%;
+      border-radius: 24px;
+      -moz-outline-radius: 14px;
+    }
+
+
+    /*Footer*/
+    .footer h3{
+      font-size: 20px;
+    }
+    .footer p{
+      font-size: 12px;
+    }
+    .footer ul li a,i{
+      font-size: 12px;
+    }
+
+    .container-md .con{
+      border-radius: 0px;
+    }
+    .con .con-bar{
+      width: 100%;
+      height: 160px;
+      overflow-y: scroll;
+      padding: 8px;
+    }
+    .con-bar .bar-scroll{
+      gap: 8px;
+      display: flex;
+      width: 1500px;
+    }
+    .con-bar .bar-scroll .bar-box{
+      width: 300px;
+      height: 147px;
+      background-color: #fff;
+      border-radius: 14px;
+    }
+
+
+
+
+    /*con-menu*/
+    .con-menu{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+    }
+    .con-box{
+      display: flex;
+      justify-content: center;
+      gap:8px;
+      flex-wrap: wrap;
+    }
+    .con-box .box-item{
+      width: 100px;
+      height: 140px;
+      text-align: center;
+      box-shadow: 3px 5px 8px #374151;
+      border-radius: 4px;
+    }
+    .con-box .box-item h5{
+      font-size: 14px;
+    }
+    .con-box .box-item p{
+      font-size: 8px;
+    }
+    .con-box .box-item i{
+      font-size: 8px;
+      color: gold;
+    }
+    .con-box .box-item img{
+      height: 50px;
+    }
+  }
